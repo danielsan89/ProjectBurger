@@ -1,11 +1,14 @@
 <div class="row">
+  <ul>
   <% hamburgers.forEach(hamburger => { %>
-    <% if (hamburger.approved) { %>
-    <div class="col-2 hamburgers" style="background-image:url(<%= hamburger.image %>)">
+    <% if (!hamburger.approved) { %>
+      <li>
       <a href="/hamburgers/<%= hamburger.id %>">
         <strong><%= hamburger.name.toUpperCase() %></strong>@<strong><%= hamburger.restaurant.toUpperCase() %></strong>
       </a>
-    </div>
+
+    </li>
     <% } %>
   <% }) %>
+  </ul>
 </div>

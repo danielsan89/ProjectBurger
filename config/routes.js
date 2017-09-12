@@ -11,10 +11,14 @@ router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 router.route('/hamburgers')
   .get(hamburgers.index)
   .post(secureRoute,hamburgers.create);
+
+router.route('/hamburgers/admin')
+  .get(hamburgers.admin);
+
 router.route('/hamburgers/new')
   .get(secureRoute, hamburgers.new);
 router.route('/hamburgers/:id')
-  .get(secureRoute, hamburgers.show)
+  .get(hamburgers.show)
   .put(secureRoute, hamburgers.update)
   .delete(secureRoute, hamburgers.delete);
 router.route('/hamburgers/:id/edit')

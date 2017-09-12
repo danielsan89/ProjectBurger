@@ -3,10 +3,19 @@ const Hamburger = require('../models/hamburger');
 
 function hamburgersIndex(req, res) {
   Hamburger
-    .find()
+    .find(req.query) // { city: 'London' }
     .sort({ name: 1 })
     .exec()
     .then((hamburgers) => res.render('hamburgers/index', { hamburgers }))
+    .catch(err => res.render('error', { err }));
+}
+
+function hamburgersAdmin(req, res) {
+  Hamburger
+    .find() // { city: 'London' }
+    .sort()
+    .exec()
+    .then((hamburgers) => res.render('hamburgers/admin', { hamburgers }))
     .catch(err => res.render('error', { err }));
 }
 
@@ -24,6 +33,7 @@ function hamburgersCreate(req, res) {
   req.body.user = req.currentUser;
 
   Hamburger
+
     .create(req.body)
     .then(() => res.redirect('/hamburgers'))
     .catch(err => res.render('error', { err }));
@@ -46,6 +56,7 @@ function hamburgersUpdate(req, res) {
     .findById(req.params.id)
     .exec()
     .then(hamburger => {
+
       hamburger = Object.assign(hamburger, req.body);
       return hamburger.save();
     })
@@ -70,5 +81,6 @@ module.exports = {
   update: hamburgersUpdate,
   delete: hamburgersDelete,
   new: hamburgersNew,
-  create: hamburgersCreate
+  create: hamburgersCreate,
+  admin: hamburgersAdmin
 };

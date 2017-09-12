@@ -6,7 +6,12 @@
     <%- include ./partials/_scripts %>
   </head>
   <body>
-    <%- include ./partials/_navbar %>
-    <%- body %>
+    <header>
+      <%- include ./partials/_navbar %>
+    </header>
+    <div class="container">
+      <%- body %>
+    </div>
   </body>
+  <%- include ./partials/_footer %>
 </html>

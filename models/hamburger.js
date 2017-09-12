@@ -11,8 +11,9 @@ const hamburgerSchema = new mongoose.Schema({
   name: { type: String, required: true },
   restaurant: { type: String, required: true},
   image: { type: String, required: true },
-  city: { type: String, maxlength: 380 },
-  ingredients: { type: String, required: true }
+  city: { type: String, required: true },
+  ingredients: { type: String, required: true },
+  approved: { type: Boolean, default: false }
   //user: { type: String, required: true},
   // comments: [commentsSchema]
 });

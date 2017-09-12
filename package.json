@@ -32,6 +32,8 @@
     "bcrypt": "^1.0.3",
     "bluebird": "^3.5.0",
     "body-parser": "^1.18.0",
+    "bootstrap": "4.0.0-alpha.6",
+    "datamap": "^0.0.2",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.1",
