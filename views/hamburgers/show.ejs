@@ -1,0 +1,13 @@
+
+  <h1> <%= hamburger.name %></h1>
+
+  <p>restaurant: <%= hamburger.restaurant %></p>
+  <img src="<%= hamburger.image %>">
+  <p>tasting notes: <%= hamburger.tastingNotes %> </p>
+  <p>ingredients: <%= hamburger.ingredients %> </p>
+
+  <form method="POST" action="/hamburgers/<%= hamburger.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <a class="button is-primary" href="/hamburgers/<%= hamburger.id %>/edit">Edit</a>
+    <button class="button is-danger">Delete</button>
+  </form>

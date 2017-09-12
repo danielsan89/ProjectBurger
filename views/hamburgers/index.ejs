@@ -1,0 +1,9 @@
+<h2>HAMBURGERS</h2>
+<div class="row">
+  <% hamburgers.forEach(hamburger => { %>
+    <div class="two columns">
+      <a href="/hamburgers/<%= hamburger.id %>"><p> <%= hamburger.name %></p></a>
+      <img src="<%= hamburger.image %>">
+    </div>
+  <% }) %>
+</div>

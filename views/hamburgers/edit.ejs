@@ -1,0 +1,36 @@
+<form method="POST" action="/hamburgers/<%= hamburger.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" name="name" type="text" placeholder="Name" value="<%= hamburger.name %>">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Restaurant</label>
+    <div class="control">
+      <input class="input" name="restaurant" type="text" placeholder="Restaurant" value="<%= hamburger.restaurant %>">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Image</label>
+    <div class="control">
+      <input class="input" name="image" type="text" placeholder="Image" value="<%= hamburger.image %>">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Tasting Notes</label>
+    <div class="control">
+      <textarea class="textarea" name="tastingNotes" placeholder="Tasting Notes"><%= hamburger.tastingNotes %></textarea>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Ingredients</label>
+    <div class="control">
+      <textarea class="textarea" name="ingredients" placeholder="Ingredients"><%= hamburger.ingredients %></textarea>
+    </div>
+  </div>
+  <div class="control">
+    <button>Submit</button>
+  </div>
+</form>
