@@ -4,7 +4,7 @@
       <% if (!hamburger.approved) { %>
         <li>
         <a href="/hamburgers/<%= hamburger.id %>">
-          <strong><%= hamburger.name.toUpperCase() %></strong>@<strong><%= hamburger.restaurant.toUpperCase() %></strong>
+          <strong><%= hamburger.name.toUpperCase() %></strong>@<strong><%= hamburger.restaurant.name.toUpperCase() %></strong>
         </a>
       </li>
       <% }else  %>

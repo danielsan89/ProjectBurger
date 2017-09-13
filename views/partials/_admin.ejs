@@ -3,14 +3,16 @@
     <input type="hidden" name="_method" value="DELETE">
     <a class="btn btn-primary" href="/hamburgers/<%= hamburger.id %>/edit">Edit</a>
     <button class="btn btn-primary">Delete</button>
+  </form>
   <% if(!hamburger.approved){ %>
+    <form method="POST" action="/hamburgers/<%= hamburger.id %>">
       <input type="hidden" name="_method" value="PUT">
       <input type="hidden" name="approved" value="true">
       <div class="control">
         <button class="btn btn-primary">Approve</button>
       </div>
+    </form>
   <% } else { %>
     <button class="btn btn-success">Approved</button>
   <% } %>
-  </form>
 <% } %>

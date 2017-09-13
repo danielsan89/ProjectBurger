@@ -3,10 +3,12 @@
     <img class="card-img-top" src="<%= hamburger.image %>"  alt="Card image cap">
     <div class="card-block">
       <h4 class="card-title"><%= hamburger.name %></h4>
-      <strong>RESTAURANT</strong><p>  <%= hamburger.restaurant %></p>
+      <strong>RESTAURANT</strong><p>  <%= hamburger.restaurant.name %></p>
       <strong>USER</strong> <p> <%= hamburger.user.username %></p>
+      <strong>COUNTRY</strong><p>  <%= hamburger.restaurant.country %></p>
+      <strong>CITY</strong><p>  <%= hamburger.restaurant.city %></p>
       <strong>INGREDIENTS</strong><p>  <%= hamburger.ingredients %></p>
-      
+
       <%- include ../partials/_admin %>
     </div>
   </div>

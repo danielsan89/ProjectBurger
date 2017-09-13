@@ -1,9 +1,11 @@
 const Hamburger = require('../models/hamburger');
+const Restaurant = require('../models/restaurant');
 
 
 function hamburgersIndex(req, res) {
   Hamburger
     .find(req.query)
+    .populate('user restaurant')
     .sort({ name: 1 })
     .exec()
     .then((hamburgers) => res.render('hamburgers/index', { hamburgers }))
@@ -13,6 +15,7 @@ function hamburgersIndex(req, res) {
 function hamburgersAdmin(req, res) {
   Hamburger
     .find()
+    .populate('user restaurant')
     .sort()
     .exec()
     .then((hamburgers) => res.render('hamburgers/admin', { hamburgers }))
@@ -22,7 +25,7 @@ function hamburgersAdmin(req, res) {
 function hamburgersShow(req, res) {
   Hamburger
     .findById(req.params.id)
-    // .populate('user')
+    .populate('user restaurant')
     .exec()
     .then(hamburger => res.render('hamburgers/show', { hamburger }))
     .catch(err => res.render('error', { err }));
@@ -40,14 +43,28 @@ function hamburgersCreate(req, res) {
 }
 
 function hamburgersNew(req, res) {
-  res.render('hamburgers/new');
+
+
+  Restaurant
+    .find()
+    .sort({ name: 1 })
+    .exec()
+    .then((restaurants) => res.render('hamburgers/new', { restaurants }))
+    .catch(err => res.render('error', { err }));
 }
 
 function hamburgersEdit(req, res) {
   Hamburger
     .findById(req.params.id)
+    .populate('restaurant')
     .exec()
-    .then(hamburger => res.render('hamburgers/edit', { hamburger }))
+    .then(hamburger => {
+      return Restaurant
+        .find()
+        .sort({ name: 1 })
+        .exec()
+        .then((restaurants) => res.render('hamburgers/edit', { hamburger, restaurants }));
+    })
     .catch(err => res.render('error', { err }));
 }
 

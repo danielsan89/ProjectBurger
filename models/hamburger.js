@@ -9,10 +9,8 @@ const commentsSchema= new mongoose.Schema({
 
 const hamburgerSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  restaurant: { type: String, required: true},
+  restaurant: { type: mongoose.Schema.ObjectId, ref: 'Restaurant' },
   image: { type: String, required: true },
-  city: { type: String, required: true },
-  country: { type: String, required: true },
   ingredients: { type: String, required: true },
   approved: { type: Boolean, default: false },
   user: { type: mongoose.Schema.ObjectId, ref: 'User' },

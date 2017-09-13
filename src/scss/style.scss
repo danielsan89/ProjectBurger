@@ -62,12 +62,11 @@ body {
 }
 
 header{
-
   .nav-icon{
     height:30px;
     width:30px;
     &:hover{
-      border-bottom: 2px solid black;
+      border-bottom: 1px solid black;
     }
   }
   .dropdown-menu{
@@ -85,5 +84,13 @@ header{
     .buttons{
       margin-top:10px;
     }
+  }
+}
+
+footer{
+  text-align: center;
+  .nav-icon{
+    height:30px;
+    width:30px;
   }
 }

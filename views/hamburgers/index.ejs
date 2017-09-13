@@ -4,7 +4,7 @@
     <div class="col-2 hamburgers" style="background-image:url(<%= hamburger.image %>)">
       <a href="/hamburgers/<%= hamburger.id %>">
         <h2><%= hamburger.name %></h2>
-        <h3><%= hamburger.restaurant %></h3>
+        <h3><%= hamburger.restaurant.name %></h3>
       </a>
     </div>
     <% } %>
