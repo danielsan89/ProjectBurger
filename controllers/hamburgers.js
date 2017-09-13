@@ -3,16 +3,16 @@ const Hamburger = require('../models/hamburger');
 
 function hamburgersIndex(req, res) {
   Hamburger
-    .find(req.query) // { city: 'London' }
+    .find(req.query)
     .sort({ name: 1 })
     .exec()
     .then((hamburgers) => res.render('hamburgers/index', { hamburgers }))
-    .catch(err => res.render('error', { err }));    
+    .catch(err => res.render('error', { err }));
 }
 
 function hamburgersAdmin(req, res) {
   Hamburger
-    .find() // { city: 'London' }
+    .find()
     .sort()
     .exec()
     .then((hamburgers) => res.render('hamburgers/admin', { hamburgers }))

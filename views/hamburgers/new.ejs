@@ -1,4 +1,4 @@
-<div class="container">
+
   <form method="POST" action="/hamburgers">
     <div class="field">
       <label class="label">BurgerName</label>
@@ -21,7 +21,13 @@
     <div class="field">
       <label class="label">City</label>
       <div class="control">
-        <textarea class="textarea" name="city" placeholder="City" maxlength="380" required></textarea>
+        <textarea class="textarea" name="city" placeholder="City" required></textarea>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Country</label>
+      <div class="control">
+        <textarea class="textarea" name="country" placeholder="Country" required></textarea>
       </div>
     </div>
     <div class="field">
@@ -34,4 +40,3 @@
       <button class="button is-primary">Submit</button>
     </div>
   </form>
-</div>

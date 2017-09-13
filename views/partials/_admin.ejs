@@ -1,15 +1,16 @@
-<% if(locals.currentUser.admin){ %>
+<% if(locals.isAuthenticated && locals.currentUser.admin){ %>
+  <form method="POST" action="/hamburgers/<%= hamburger.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <a class="btn btn-primary" href="/hamburgers/<%= hamburger.id %>/edit">Edit</a>
+    <button class="btn btn-primary">Delete</button>
   <% if(!hamburger.approved){ %>
-
-<form method="POST" action="/hamburgers/<%= hamburger.id %>">
-  <input type="hidden" name="_method" value="PUT">
-  <input type="hidden" name="approved" value="true">
-  <div class="control">
-    <button class="btn btn-primary">Approve</button>
-  </div>
-</form>
+      <input type="hidden" name="_method" value="PUT">
+      <input type="hidden" name="approved" value="true">
+      <div class="control">
+        <button class="btn btn-primary">Approve</button>
+      </div>
   <% } else { %>
-    <p class="btn btn-success">Approved</p>
+    <button class="btn btn-success">Approved</button>
   <% } %>
+  </form>
 <% } %>
-  

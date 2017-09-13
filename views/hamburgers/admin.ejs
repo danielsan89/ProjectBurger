@@ -1,14 +1,14 @@
 <div class="row">
   <ul>
-  <% hamburgers.forEach(hamburger => { %>
-    <% if (!hamburger.approved) { %>
-      <li>
-      <a href="/hamburgers/<%= hamburger.id %>">
-        <strong><%= hamburger.name.toUpperCase() %></strong>@<strong><%= hamburger.restaurant.toUpperCase() %></strong>
-      </a>
-
-    </li>
-    <% } %>
-  <% }) %>
+    <% hamburgers.forEach(hamburger => { %>
+      <% if (!hamburger.approved) { %>
+        <li>
+        <a href="/hamburgers/<%= hamburger.id %>">
+          <strong><%= hamburger.name.toUpperCase() %></strong>@<strong><%= hamburger.restaurant.toUpperCase() %></strong>
+        </a>
+      </li>
+      <% }else  %>
+        <h1> No requests to handle </h1>
+    <% }) %>
   </ul>
 </div>

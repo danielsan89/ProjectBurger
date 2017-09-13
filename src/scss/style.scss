@@ -46,8 +46,10 @@ body {
       color: white;
       text-decoration: none;
 
-      strong {
+      h2,h3 {
         text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+        text-transform: uppercase;
+        font-size: 24px;
       }
     }
 
@@ -60,7 +62,7 @@ body {
 }
 
 header{
-  
+
   .nav-icon{
     height:30px;
     width:30px;

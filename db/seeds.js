@@ -12,7 +12,7 @@ Hamburguer.collection.drop();
 
 User
   .create([{
-    username: 'ADMIN',
+    username: 'wordlwideburgerjoint#0',
     email: 'admin@admin.com',
     password: 'password',
     passwordConfirmation: 'password',
@@ -27,6 +27,8 @@ User
         image: 'http://www.hot-dinners.com/images/stories/blog/2015/burger-bear-roundabout.jpg',
         city: 'London',
         country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef Patty, Smoked AppleWood Bacon, Cheddar all in a Bun'
       },{
         name: 'Bacon N Cheese (GF Option)',
@@ -34,6 +36,7 @@ User
         image: 'http://steampub.com/wp-content/uploads/2013/05/Boursin-Burger-Closed-1024x680.jpg',
         city: 'London',
         country: 'United Kingdom',
+        approved: true,
         ingredients: 'Bacon, Cheddar, Beef Patty, Homemade pickles, Smoked Bacon, Standar Bun'
 
       },{
@@ -42,6 +45,8 @@ User
         image: 'https://preview.ibb.co/jCuJ9F/London_Patty_Bun.jpg',
         city: 'London',
         country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef patty, bacon, cheese, tomato, lettuce, mounds of caramelised onions, ketchup, smokey P&B mayo in a brioche bun'
 
       },{
@@ -50,12 +55,17 @@ User
         image: 'https://image.ibb.co/dw80Oa/Everywhere_Five_Guys.jpg',
         city: 'New York',
         country: 'United States of America',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef Patty, Lettuce, Tomato, Bacon, Cheddar Cheese, Mayo, Ketchup...'
       },{
         name: 'Dirty bacon',
         restaurant: 'Dirty Burgers',
         image: 'https://preview.ibb.co/hoTpGv/London_Dirty_Burger.jpg',
         city: 'London',
+        country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'Dirty Burger Beef Patty, mature cheddar cheese, bacon, lettuce, tomato, gherkin and their special mayo!'
 
       },{
@@ -63,6 +73,9 @@ User
         restaurant: 'The Bleecker',
         image: 'https://preview.ibb.co/knPwwv/London_Bleecker.jpg',
         city: 'London',
+        country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'double beef, double cheese, onion & sauce'
 
       },{
@@ -70,6 +83,9 @@ User
         restaurant: 'Reds True BBQ',
         image: 'https://preview.ibb.co/f5fiRv/London_Red_True_BBQ.jpg',
         city: 'London',
+        country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'Two patties, melted cheese, smoked peppered bacon, crispy onions and Dirty sauce. All between two sweet glazed donuts. Served with frickles.'
 
       },{
@@ -77,6 +93,9 @@ User
         restaurant: 'Harlem Shake',
         image: 'https://preview.ibb.co/bFqKYa/harlem.jpg',
         city: 'New York',
+        country: 'United States of America',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef patty, american cheese, onions, pickles and their special sauce'
 
       },{
@@ -84,6 +103,9 @@ User
         restaurant: 'The Pit',
         image: 'https://image.ibb.co/kAhuia/Berlin_The_Devil.jpg',
         city: 'Berlin',
+        country: 'Germany',
+        approved: true,
+        user: users[0],
         ingredients: '18h smoked brisket with sea salt and black pepper on a bun'
 
       },{
@@ -91,6 +113,9 @@ User
         restaurant: 'Hot Buns',
         image: 'https://preview.ibb.co/fbfEia/Copenhagen_Hot_Buns.jpg',
         city: 'Copenhagen',
+        country: 'Denmark',
+        approved: true,
+        user: users[0],
         ingredients: 'Pork roast, pork rinds, red cabbage, pickles and mustard mayo'
 
       },{
@@ -98,6 +123,9 @@ User
         restaurant: 'The Bird',
         image: 'https://breadcrumbs.london/wp-content/uploads/2016/03/The-Original-Waffle-Burger-min.jpg',
         city: 'London',
+        country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: 'Two boneless free range thighs, pork bacon (optional), American cheese, house BBQ, mayo, hot sauce & Canadian maple syrup served between 2 freshly griddled waffles!'
 
       },{
@@ -106,6 +134,8 @@ User
         image: 'https://image.ibb.co/g2FfOa/Oviedo_Naguar.jpg',
         city: 'Oviedo',
         country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: 'Rump Breast Beef Patty, Bacon, Oscos Cheese, Lettuce, Tomato, Homemade Ketchup in a Bun'
 
       },{
@@ -113,12 +143,18 @@ User
         restaurant: 'Bowies',
         image: 'http://bowies.es/wp-content/uploads/2016/03/hamburguesa-bowies-150-gr.jpg',
         city: 'Oviedo',
+        country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: '150g Beef Patty, Goat Cheese, Candied Peppers with a Reduction of Porto Wine in a Bun'
       },{
         name: 'Kevin Bacon',
         restaurant: 'Goiko Grill',
         image: 'https://image.ibb.co/gNEkpF/Madrid_Goiko_Grill.jpg',
         city: 'Madrid',
+        country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef Patty mixed with Chopped Bacon, Crunch Onion and Cheddar Cheese in a Bun'
 
       },{
@@ -126,6 +162,9 @@ User
         restaurant: 'Smokestak',
         image: 'https://image.ibb.co/caBWUF/London_Smokestak.jpg',
         city: 'London',
+        country: 'United Kingdom',
+        approved: true,
+        user: users[0],
         ingredients: '24H Brisket and hot chillies in a Bun'
 
       },{
@@ -133,12 +172,18 @@ User
         restaurant: 'Origenes',
         image: 'https://1.bp.blogspot.com/-zVBPOEcVWNA/WEXeDpoMZXI/AAAAAAAABdI/ZUuqEm7TtsUpglj49I23CkYXnOn7EoWZgCEw/s1600/IMG_20161203_211453.jpg',
         city: 'Oviedo',
+        country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: 'Bacon, Mozzarella, Beef Patty, Homemade pickles with homemade BBQ Sauce in a Bun'
       },{
         name: 'Cheeseburger 150g',
         restaurant: 'Rebel Room',
         image: 'https://sattundfroh.de/wp-content/uploads/2016/07/Rebel-Room-5.jpg',
         city: 'Berlin',
+        country: 'Germany',
+        approved: true,
+        user: users[0],
         ingredients: 'Beef Patty, Grilled Onions, Cheddar Cheese with ketchup, mustard in a Bun'
 
       },{
@@ -146,12 +191,18 @@ User
         restaurant: 'De Labra',
         image: 'http://fotos01.lne.es/2016/02/12/646x260/wagyu-1.jpg',
         city: 'Oviedo',
+        country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: 'Waygu Patty, Black Truffle, Mozarella Cheese in a Seeds Bun'
       },{
         name: 'Pulled Pork BBQ',
         restaurant: 'The Good Burger',
         image: 'http://www.thegoodburger.com/assets/uploads/2017/03/614x521-Productos-Web-PULLED.jpg',
         city: 'Salamanca',
+        country: 'Spain',
+        approved: true,
+        user: users[0],
         ingredients: 'Pulled Pork, Onion Rings, TGB BBQ Sauce'
 
       }]);
