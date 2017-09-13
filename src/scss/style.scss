@@ -8,6 +8,10 @@ body {
   img {
     max-width:100%;
   }
+  h1{
+    text-align: center;
+    font-family: 'Zilla Slab Highlight', cursive;
+  }
   #login{
     text-align: center;
     border:1px solid grey;
@@ -16,14 +20,19 @@ body {
     height: 20vw;
     background-color: darkgrey;
   }
-
+  .containerShow{
+    margin-left: 20%;
+    h4{
+      font-family: 'Zilla Slab Highlight', cursive;
+    }
+  }
 
   .hamburgers {
     height: 200px;
     background-position: center;
     background-size: cover;
     margin-bottom: 5px;
-    font-family: 'Abril Fatface', cursive;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +40,7 @@ body {
     padding: 10px;
 
     a {
+      font-family: 'Zilla Slab Highlight', cursive;
       opacity: 0;
       transition: opacity 0.5s;
       color: white;
@@ -50,6 +60,7 @@ body {
 }
 
 header{
+  
   .nav-icon{
     height:30px;
     width:30px;

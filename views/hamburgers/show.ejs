@@ -1,32 +1,17 @@
-
-
-    <div class="card" style="width: 40rem;">
-      <img class="card-img-top" src="<%= hamburger.image %>"  alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">Card title</h4>
-        <strong>NAME</strong> <p> <%= hamburger.name %></p>
-        <strong>RESTAURANT</strong><p>  <%= hamburger.restaurant %></p>
-        <strong>USER</strong> <p> <%= hamburger.username %></p>
-        <strong>INGREDIENTS</strong><p>  <%= hamburger.ingredients %></p>
-        <form method="POST" action="/hamburgers/<%= hamburger.id %>">
-          <input type="hidden" name="_method" value="DELETE">
-          <a class="btn btn-primary" href="/hamburgers/<%= hamburger.id %>/edit">Edit</a>
-          <button class="btn btn-primary">Delete</button>
-        </form>
-        <% if(locals.isAuthenticated && locals.currentUser.admin){ %>
-          <% if(!hamburger.approved){ %>
-
-        <form method="POST" action="/hamburgers/<%= hamburger.id %>">
-          <input type="hidden" name="_method" value="PUT">
-          <input type="hidden" name="approved" value="true">
-          <div class="control">
-            <button class="btn btn-primary">Approve</button>
-          </div>
-        </form>
-        <% } else { %>
-          <p class="btn btn-success">Approved</p>
-        <% } %>
-        <% } %>
-
-      </div>
+<div class="containerShow">
+  <div class="card" style="width: 40rem;">
+    <img class="card-img-top" src="<%= hamburger.image %>"  alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= hamburger.name %></h4>
+      <strong>RESTAURANT</strong><p>  <%= hamburger.restaurant %></p>
+      <strong>USER</strong> <p> <%= hamburger.username %></p>
+      <strong>INGREDIENTS</strong><p>  <%= hamburger.ingredients %></p>
+      <form method="POST" action="/hamburgers/<%= hamburger.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <a class="btn btn-primary" href="/hamburgers/<%= hamburger.id %>/edit">Edit</a>
+        <button class="btn btn-primary">Delete</button>
+      </form>
+      <%- include ../partials/_admin %>
     </div>
+  </div>
+</div>

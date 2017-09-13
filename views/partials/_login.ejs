@@ -1,0 +1,43 @@
+<% if(!locals.isAuthenticated){ %>
+  <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img class="nav-icon" src="https://cdn1.iconfinder.com/data/icons/freeline/32/account_friend_human_man_member_person_profile_user_users-256.png" alt="users">
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdown01">
+<% } else {%>
+  <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img class="nav-icon" src="https://cdn1.iconfinder.com/data/icons/freeline/32/account_friend_human_man_member_person_profile_user_users-256.png" alt="users">
+  <%= locals.currentUser.username %>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdown01">
+  <% } %>
+    <% if(!locals.isAuthenticated){ %>
+      <div class="dropdown-login">
+        <form method="POST" action="/login">
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" name="email" type="text" placeholder="Email">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input class="input" name="password" type="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="control buttons">
+            <button class="dropdown-item">Login</button>
+          </div>
+          <div class="control buttons">
+            <a class="dropdown-item" href="/register">Register</a>
+          </div>
+        </form>
+      </div>
+<% } else if(locals.currentUser.admin){%>
+  <a class="dropdown-item" href="/hamburgers/new"><img class="nav-icon-drop" src="https://d30y9cdsu7xlg0.cloudfront.net/png/98458-200.png"></a>
+  <a class="dropdown-item" href="/hamburgers/admin"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/business-management-16/33/operator-512.png"></a>
+  <a class="dropdown-item" href="/logout"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/online-user/120/logout-user-1-512.png"></a>
+<% } else{%>
+  <a class="dropdown-item" href="/hamburgers/new"><img class="nav-icon-drop" src="https://d30y9cdsu7xlg0.cloudfront.net/png/98458-200.png"></a>
+  <a class="dropdown-item" href="/logout"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/online-user/120/logout-user-1-512.png"></a>
+<% } %>

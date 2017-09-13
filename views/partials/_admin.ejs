@@ -1,0 +1,15 @@
+<% if(locals.currentUser.admin){ %>
+  <% if(!hamburger.approved){ %>
+
+<form method="POST" action="/hamburgers/<%= hamburger.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="hidden" name="approved" value="true">
+  <div class="control">
+    <button class="btn btn-primary">Approve</button>
+  </div>
+</form>
+  <% } else { %>
+    <p class="btn btn-success">Approved</p>
+  <% } %>
+<% } %>
+  

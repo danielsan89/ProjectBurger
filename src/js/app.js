@@ -6,7 +6,7 @@ $(() => {
       projection: 'mercator',
       height: 500,
       fills: {
-        defaultFill: 'grey'
+        defaultFill: 'tomato'
       },
       done(datamap) {
         datamap.svg.selectAll('.datamaps-subunit').on('click', (e) => {
