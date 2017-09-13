@@ -16,12 +16,14 @@ body {
     height: 20vw;
     background-color: darkgrey;
   }
+
+
   .hamburgers {
     height: 200px;
     background-position: center;
     background-size: cover;
     margin-bottom: 5px;
-
+    font-family: 'Abril Fatface', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +34,7 @@ body {
       opacity: 0;
       transition: opacity 0.5s;
       color: white;
+      text-decoration: none;
 
       strong {
         text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
@@ -50,9 +53,24 @@ header{
   .nav-icon{
     height:30px;
     width:30px;
+    &:hover{
+      border-bottom: 2px solid black;
+    }
+  }
+  .dropdown-menu{
+    text-align: center;
+    .nav-icon-drop{
+      text-align: center;
+      height:30px;
+      width:30px;
+    }
   }
 
+
   .dropdown-login{
-    padding: 22px;
+    padding: 10px;
+    .buttons{
+      margin-top:10px;
+    }
   }
 }

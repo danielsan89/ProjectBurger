@@ -7,7 +7,7 @@ function hamburgersIndex(req, res) {
     .sort({ name: 1 })
     .exec()
     .then((hamburgers) => res.render('hamburgers/index', { hamburgers }))
-    .catch(err => res.render('error', { err }));
+    .catch(err => res.render('error', { err }));    
 }
 
 function hamburgersAdmin(req, res) {

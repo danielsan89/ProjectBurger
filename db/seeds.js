@@ -26,12 +26,14 @@ User
         restaurant: 'The Magic Roundabout',
         image: 'http://www.hot-dinners.com/images/stories/blog/2015/burger-bear-roundabout.jpg',
         city: 'London',
+        country: 'United Kingdom',
         ingredients: 'Beef Patty, Smoked AppleWood Bacon, Cheddar all in a Bun'
       },{
         name: 'Bacon N Cheese (GF Option)',
         restaurant: 'Chuck Burgers',
         image: 'http://steampub.com/wp-content/uploads/2013/05/Boursin-Burger-Closed-1024x680.jpg',
         city: 'London',
+        country: 'United Kingdom',
         ingredients: 'Bacon, Cheddar, Beef Patty, Homemade pickles, Smoked Bacon, Standar Bun'
 
       },{
@@ -39,13 +41,15 @@ User
         restaurant: 'Patty&Bun',
         image: 'https://preview.ibb.co/jCuJ9F/London_Patty_Bun.jpg',
         city: 'London',
+        country: 'United Kingdom',
         ingredients: 'Beef patty, bacon, cheese, tomato, lettuce, mounds of caramelised onions, ketchup, smokey P&B mayo in a brioche bun'
 
       },{
         name: 'Bacon Cheese Burger',
         restaurant: 'Five Guys',
         image: 'https://image.ibb.co/dw80Oa/Everywhere_Five_Guys.jpg',
-        city: 'London, Madrid, Berlin, New York',
+        city: 'New York',
+        country: 'United States of America',
         ingredients: 'Beef Patty, Lettuce, Tomato, Bacon, Cheddar Cheese, Mayo, Ketchup...'
       },{
         name: 'Dirty bacon',
@@ -101,6 +105,7 @@ User
         restaurant: 'Naguar',
         image: 'https://image.ibb.co/g2FfOa/Oviedo_Naguar.jpg',
         city: 'Oviedo',
+        country: 'Spain',
         ingredients: 'Rump Breast Beef Patty, Bacon, Oscos Cheese, Lettuce, Tomato, Homemade Ketchup in a Bun'
 
       },{

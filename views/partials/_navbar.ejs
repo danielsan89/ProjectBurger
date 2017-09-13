@@ -1,5 +1,5 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded  my-2 my-lg-0">
+  <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="/"><img class="nav-icon" src="https://cdn1.iconfinder.com/data/icons/freeline/32/home_house_real_estate-512.png" alt="home"></a>
@@ -37,19 +37,22 @@
                     <input class="input" name="password" type="password" placeholder="Password">
                   </div>
                 </div>
-                <div class="control">
-                  <button class="btn btn-outline-success my-2 my-sm-0">Login</button>
+                <div class="control buttons">
+                  <button class="dropdown-item">Login</button>
+                </div>
+                <div class="control buttons">
+                  <a class="dropdown-item" href="/register">Register</a>
                 </div>
             </form>
             </div>
-            <a class="dropdown-item" href="/register">Register</a>
-          <% } else if(locals.currentUser.username === 'ADMIN'){%>
-            <a class="dropdown-item" href="/hamburgers/new">New Hamburger</a>
-            <a class="dropdown-item" href="/hamburgers/admin">Dashboard</a>
-            <a class="dropdown-item" href="/logout">Logout</a>
+
+          <% } else if(locals.currentUser.admin){%>
+            <a class="dropdown-item" href="/hamburgers/new"><img class="nav-icon-drop" src="https://d30y9cdsu7xlg0.cloudfront.net/png/98458-200.png"></a>
+            <a class="dropdown-item" href="/hamburgers/admin"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/business-management-16/33/operator-512.png"></a>
+            <a class="dropdown-item" href="/logout"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/online-user/120/logout-user-1-512.png"></a>
           <% } else{%>
-            <a class="dropdown-item" href="/hamburgers/new">New Hamburger</a>
-            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="/hamburgers/new"><img class="nav-icon-drop" src="https://d30y9cdsu7xlg0.cloudfront.net/png/98458-200.png"></a>
+            <a class="dropdown-item" href="/logout"><img class="nav-icon-drop" src="https://cdn3.iconfinder.com/data/icons/online-user/120/logout-user-1-512.png"></a>
           <% } %>
         </div>
       </li>
