@@ -4,11 +4,14 @@ const Restaurant = require('../models/restaurant');
 
 function hamburgersIndex(req, res) {
   Hamburger
-    .find(req.query.id)
+    .find({ country: req.query.id })
     .populate('user restaurant')
     .sort({ name: 1 })
     .exec()
     .then(hamburgers => {
+      hamburgers = hamburgers.filter((hamburger) => {
+        return hamburger.restaurant.country === req.query.country;
+      });
       return Restaurant
         .find()
         .exec()
