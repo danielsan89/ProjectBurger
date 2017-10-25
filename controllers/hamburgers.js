@@ -4,7 +4,8 @@ const Restaurant = require('../models/restaurant');
 
 function hamburgersIndex(req, res) {
   Hamburger
-    .find({ country: req.query.id })
+
+    .find(req.query.id)
     .populate('user restaurant')
     .sort({ name: 1 })
     .exec()
@@ -19,6 +20,8 @@ function hamburgersIndex(req, res) {
           res.render('hamburgers/index', { hamburgers, restaurants, selectedRestaurant: req.query.restaurant});
         });
     })
+
+
     .catch(err => res.render('error', { err }));
 }
 
