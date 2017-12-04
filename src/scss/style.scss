@@ -1,5 +1,5 @@
 body {
-  margin-top:10vw;
+  margin-top:5vw;
   color: black;
 
   a{
@@ -22,6 +22,7 @@ body {
   }
   .containerShow{
     margin-left: 20%;
+    width: 40rem;
     h4{
       font-family: 'Zilla Slab Highlight', cursive;
     }
@@ -81,7 +82,6 @@ header{
     }
   }
 
-
   .dropdown-login{
     padding: 10px;
     .buttons{
@@ -95,11 +95,10 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-
-    strong{
-      font-family: 'Pacifico', cursive;
-    }
-
+  color: #9d9d9d;
+  strong{
+    font-family: 'Pacifico', cursive;
+  }
   .nav-icon{
     height:30px;
     width:30px;
